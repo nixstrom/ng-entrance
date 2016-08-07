@@ -1,0 +1,43 @@
+//
+// SEATING PLAN
+//
+$ns: ".seating-plan";
+
+#{$ns} {
+	display: flex;
+	flex: 0 0 50%;
+	justify-content: space-around;
+
+	&__birow {
+		display: flex;
+	}
+
+	&__row {
+		border: {
+			top: solid 1px $color-border;
+			left: solid 1px $color-border;
+		}
+
+		&:nth-child(even) {
+			border-right: solid 1px $color-border;
+		}
+	}
+
+	&__seat {
+		background: $color-neutral-light;
+		height: 3rem;
+		width: 3rem;
+		line-height: 3rem;
+		text-align: center;
+
+		cursor: pointer;
+
+		&:nth-child(even) {
+			border-bottom: solid 1px $color-border;
+		}
+
+		&:hover {
+			background: $color-primary;
+		}
+	}
+}

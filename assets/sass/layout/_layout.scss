@@ -6,10 +6,41 @@
 
 
 //
-// SUB NAVIGATION
+// HEADER
+//
+$ns: ".header";
+
+#{$ns} {
+	background: $color-interactive;
+	padding: 2rem;
+
+	&__inner {
+		@extend %container;
+	}
+
+	&__hero {
+		@extend %hero;
+		color: $color-text-negative;
+		flex: 1 0;
+	}
+
+	&__count {
+		@extend %h1;
+		color: $color-text-negative--faded;
+		flex: 1 0;
+		text-align: right;
+	}
+}
+
+//
+// CONTENT HEADER
 //
 $ns: ".main-area";
 
 #{$ns} {
-	background: #f00;
+	padding: 4rem;
+
+	&__inner {
+		@extend %container;
+	}
 }

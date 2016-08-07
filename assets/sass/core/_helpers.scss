@@ -10,8 +10,10 @@
 // Grid stuff
 // ==========================================================================
 
-%container {	
+%container {
+	display: flex;
 	margin: 0 auto;
+	max-width: $bp-xxlarge;
   padding: {
     left: $grid-padding;
     right: $grid-padding;

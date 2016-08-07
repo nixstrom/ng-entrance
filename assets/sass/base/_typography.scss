@@ -8,6 +8,7 @@ $font-sizes: (
    base: $base-font-size,
    body: 18,
    small: 13,
+   hero: 48,
    h1: 35,
    h2: 25,
    h3: 20,
@@ -26,7 +27,7 @@ $font-sizes: (
 
 %hero {
 	@extend %hx;
-	@include font-size(map-get($font-sizes, h1));
+	@include font-size(map-get($font-sizes, hero));
 	color: $color-primary;
 	font-weight: 700;
 	margin: 0;

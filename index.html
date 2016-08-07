@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en" ng-app="entrance">
+	<head>
+		<meta charset="utf-8">
+		<title>Angular entrance</title>
+
+		<link rel="stylesheet" href="public/stylesheets/main.css">
+
+		<script src="node_modules/angular/angular.js"></script>
+		<script src="assets/js/app.js"></script>
+	</head>
+	<body>
+
+		<header class="header">
+			<div class="header__inner">
+				<h1 class="header__hero">Indgang</h1>
+				<h3 class="header__count" ng-controller="UserController as userCtrl">{{users.length}}/60 tilmeldte</h3>
+			</div>
+		</header>
+
+		<main class="main-area">
+			<div class="main-area__inner">
+				<article class="seating-plan">
+
+					<div class="seating-plan__birow">
+						<div class="seating-plan__row">
+							<div class="seating-plan__seat">1</div>
+							<div class="seating-plan__seat">2</div>
+							<div class="seating-plan__seat">3</div>
+							<div class="seating-plan__seat">4</div>
+							<div class="seating-plan__seat">5</div>
+							<div class="seating-plan__seat">6</div>
+							<div class="seating-plan__seat">7</div>
+							<div class="seating-plan__seat">8</div>
+							<div class="seating-plan__seat">9</div>
+							<div class="seating-plan__seat">10</div>
+						</div>
+						<div class="seating-plan__row">
+							<div class="seating-plan__seat">11</div>
+							<div class="seating-plan__seat">12</div>
+							<div class="seating-plan__seat">13</div>
+							<div class="seating-plan__seat">14</div>
+							<div class="seating-plan__seat">15</div>
+							<div class="seating-plan__seat">16</div>
+							<div class="seating-plan__seat">17</div>
+							<div class="seating-plan__seat">18</div>
+							<div class="seating-plan__seat">19</div>
+							<div class="seating-plan__seat">20</div>
+						</div>
+					</div>
+
+					<div class="seating-plan__birow">
+						<div class="seating-plan__row">
+							<div class="seating-plan__seat">21</div>
+							<div class="seating-plan__seat">22</div>
+							<div class="seating-plan__seat">23</div>
+							<div class="seating-plan__seat">24</div>
+							<div class="seating-plan__seat">25</div>
+							<div class="seating-plan__seat">26</div>
+							<div class="seating-plan__seat">27</div>
+							<div class="seating-plan__seat">28</div>
+							<div class="seating-plan__seat">29</div>
+							<div class="seating-plan__seat">30</div>
+						</div>
+						<div class="seating-plan__row">
+							<div class="seating-plan__seat">31</div>
+							<div class="seating-plan__seat">32</div>
+							<div class="seating-plan__seat">33</div>
+							<div class="seating-plan__seat">34</div>
+							<div class="seating-plan__seat">35</div>
+							<div class="seating-plan__seat">36</div>
+							<div class="seating-plan__seat">37</div>
+							<div class="seating-plan__seat">38</div>
+							<div class="seating-plan__seat">39</div>
+							<div class="seating-plan__seat">40</div>
+						</div>
+					</div>
+
+					<div class="seating-plan__birow">
+						<div class="seating-plan__row">
+							<div class="seating-plan__seat">41</div>
+							<div class="seating-plan__seat">42</div>
+							<div class="seating-plan__seat">43</div>
+							<div class="seating-plan__seat">44</div>
+							<div class="seating-plan__seat">45</div>
+							<div class="seating-plan__seat">46</div>
+							<div class="seating-plan__seat">47</div>
+							<div class="seating-plan__seat">48</div>
+							<div class="seating-plan__seat">49</div>
+							<div class="seating-plan__seat">50</div>
+						</div>						
+						<div class="seating-plan__row">
+							<div class="seating-plan__seat">51</div>
+							<div class="seating-plan__seat">52</div>
+							<div class="seating-plan__seat">53</div>
+							<div class="seating-plan__seat">54</div>
+							<div class="seating-plan__seat">55</div>
+							<div class="seating-plan__seat">56</div>
+							<div class="seating-plan__seat">57</div>
+							<div class="seating-plan__seat">58</div>
+							<div class="seating-plan__seat">59</div>
+							<div class="seating-plan__seat">60</div>
+						</div>
+					</div>
+				</article>
+
+				<article class="users" ng-controller="UserController as userCtrl">
+
+					<input type="search" ng-model="nameFilter" placeholder="Filter users ...">
+
+					<ul class="users__list">
+						<li class="users__item"
+							ng-repeat="user in users | filter: nameFilter"
+							ng-show="user.seat">
+
+							<input type="checkbox" checked="{{user.arrived}}" ng-model="user.arrived">
+
+							{{user.name}}
+
+							<span class="users__seat">{{user.seat}}</span>
+						</li>
+					</ul>
+				</article>
+			</div>
+		</main>
+
+	</body>
+</html>

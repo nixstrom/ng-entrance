@@ -89,7 +89,6 @@ gulp.task('scripts', function () {
 gulp.task('watch', function() {
   gulp.watch(paths.markup.src, ['markup']);
   gulp.watch('assets/sass/**/*.scss', ['styles']);
-  gulp.watch(paths.scripts.src, ['scripts']);
 });
 
 // Defaults
