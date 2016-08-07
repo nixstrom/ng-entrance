@@ -1,0 +1,26 @@
+// ==========================================================================
+// COLORS (use inferiour US spelling consistent with the actual property name)
+// ==========================================================================
+
+$color-primary  : #fff;
+$color-secondary: #000;
+$color-tertiary : #231f20; // dark brown
+
+$color-neutral-light: #eee;
+
+$color-text: #505050;
+$color-text--faded: lighten($color-text, 30%);
+
+$color-text-negative: #fff;
+
+$color-display: #353535;
+$color-selection: #fff;
+$color-selection-bg: rgba(0,0,0,.6);
+
+$color-border: #aaa;
+
+$color-interactive: #DA0303;
+$color-interactive-hover: darken(#76C0CF, 10%);
+
+$color-link: $color-interactive;
+$color-link--hover: lighten($color-link, 15%);

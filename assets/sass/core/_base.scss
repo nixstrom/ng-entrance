@@ -1,0 +1,30 @@
+// Base rules are the defaults. They are almost exclusively single element selectors but it could include attribute selectors,
+// pseudo-class selectors, child selectors or sibling selectors. Essentially, a base style says that wherever this element is
+// on the page, it should look like this.
+
+// The base rules should not include class- or ID-selectors, just the base elements.
+
+// Base
+// ==========================================================================
+
+html { font-size: 100%; }
+
+body {
+  background: #eee;
+  color: $color-text;
+  font-family: $font;
+  line-height: 1.15;
+  margin: 0 auto;
+  position: relative;
+  left: 0;
+  @include font-size(16);
+
+  transition: left .15s cubic-bezier(0,.2,0.4,1);
+
+  &.mob-nav { left: -100%; }
+}
+
+img {
+  max-width: 100%;
+  vertical-align: top;
+}

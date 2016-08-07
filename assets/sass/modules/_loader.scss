@@ -1,0 +1,30 @@
+.loader {
+	background: rgba(255,255,255,.9);
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	pointer-events: none;
+	position: fixed;
+		top: 0; left: 0; z-index: 999;
+
+	transition: opacity .4s;
+
+	&.is-visible {
+		opacity: 1;
+		pointer-events: all;
+	}
+
+	&::after {
+		content: '';
+		border: solid .5rem $color-neutral-light;
+		border-top-color: $color-interactive;
+		border-radius: 50%;
+		display: block;
+		height: 2rem;
+		width: 2rem;
+		position: fixed;
+		top: calc(50% - 1rem); left: calc(50% - 1rem);
+
+		animation: spin 1s infinite linear;
+	}
+}

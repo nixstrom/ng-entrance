@@ -1,0 +1,12 @@
+//
+// GRID (flexbox)
+//
+
+.container {
+	@extend %container;
+}
+
+.two-thirds {
+	box-sizing: border-box;
+	flex: 1 0 66.66%;
+}
